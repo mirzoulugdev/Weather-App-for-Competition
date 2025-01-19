@@ -16,18 +16,7 @@ class WeatherProvider extends ChangeNotifier {
   String errorMessage = "";
   String address = "Unknown";
 
-  CurrentWeatherModel? currentWeather;
   ForecastModel? forecastWeather;
-
-  void resetState() {
-    isLoading = false;
-    hasError = false;
-    errorMessage = "";
-    currentWeather = null;
-    forecastWeather = null;
-    address = "Unknown";
-    notifyListeners();
-  }
 
   Future<Position> determinePosition() async {
     try {
@@ -103,7 +92,6 @@ class WeatherProvider extends ChangeNotifier {
   }
 
   Future<void> fetchWeatherByLocation() async {
-    resetState(); // Reset state
     isLoading = true;
     notifyListeners();
 
