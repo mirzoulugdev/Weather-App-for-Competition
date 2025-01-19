@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen>
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       IconButton(
-                        onPressed: () => context.go(AppRouterNames.search),
+                        onPressed: () {},
                         icon: SvgPicture.asset(
                           width: 30.w,
                           height: 30.h,

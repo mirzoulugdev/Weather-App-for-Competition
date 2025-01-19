@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
@@ -38,8 +37,7 @@ class RepositoryImpl implements AppRepository {
             "Failed to fetch forecast weather data. Status code: ${response.statusCode}");
       }
     } catch (e) {
-      // log("Error in fetchForecastData: $e");
-      rethrow; // Xatoni qayta tashlash
+      rethrow;
     }
   }
 }
