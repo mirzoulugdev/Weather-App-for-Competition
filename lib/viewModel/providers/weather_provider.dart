@@ -2,7 +2,6 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:hackaton/model/current_weather_model.dart';
 import 'package:hackaton/model/forecast_model.dart';
 import 'package:hackaton/viewModel/data/repositories/repository_impl.dart';
 
@@ -12,7 +11,7 @@ class WeatherProvider extends ChangeNotifier {
   WeatherProvider({required this.repo});
 
   bool isLoading = false;
-  bool hasError = false;
+
   String errorMessage = "";
   String address = "Unknown";
 
@@ -79,14 +78,12 @@ class WeatherProvider extends ChangeNotifier {
       final result = await repo.fetchForecastData(name);
       if (result != null) {
         forecastWeather = result;
-        // log("Forecast data fetched.");
         log(forecastWeather.toString());
       } else {
         throw Exception("No forecast data found.");
       }
       notifyListeners();
     } catch (e) {
-      // log("Error fetching forecast weather data: $e");
       throw Exception("Failed to fetch forecast weather data: $e");
     }
   }
@@ -100,7 +97,6 @@ class WeatherProvider extends ChangeNotifier {
       await getAddressFromLatLng(position);
       await getForecastWeatherData();
     } catch (e) {
-      hasError = true;
       errorMessage = e.toString();
       log("Error fetching weather by location: $e");
     } finally {
