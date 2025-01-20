@@ -1,8 +1,8 @@
+import 'package:Weather/routes/app_router.dart';
+import 'package:Weather/viewModel/data/repositories/repository_impl.dart';
+import 'package:Weather/viewModel/providers/weather_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hackaton/routes/app_router.dart';
-import 'package:hackaton/viewModel/data/repositories/repository_impl.dart';
-import 'package:hackaton/viewModel/providers/weather_provider.dart';
 import 'package:provider/provider.dart';
 import 'di/service_locator.dart';
 

@@ -1,13 +1,13 @@
+import 'package:Weather/routes/app_router_names.dart';
+import 'package:Weather/utils/app_colors.dart';
+import 'package:Weather/utils/app_icons.dart';
+import 'package:Weather/view/widgets/container_widget.dart';
+import 'package:Weather/viewModel/providers/weather_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hackaton/routes/app_router_names.dart';
-import 'package:hackaton/utils/app_colors.dart';
-import 'package:hackaton/utils/app_icons.dart';
-import 'package:hackaton/view/widgets/container_widget.dart';
-import 'package:hackaton/viewModel/providers/weather_provider.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
@@ -231,7 +231,7 @@ class _HomeScreenState extends State<HomeScreen>
                                 .forecastday[0].hour.length,
                             itemBuilder: (context, index) {
                               final hourlyData = weatherProvider
-                                  .forecastWeather!
+                                  ?.forecastWeather!
                                   .forecast
                                   .forecastday[0]
                                   .hour[index];
@@ -251,7 +251,7 @@ class _HomeScreenState extends State<HomeScreen>
                                   children: [
                                     Text(
                                       DateFormat("HH:mm").format(
-                                        DateTime.parse(hourlyData.time),
+                                        DateTime.parse(hourlyData!.time),
                                       ),
                                       style: TextStyle(
                                         fontSize: 14.sp,
@@ -261,9 +261,9 @@ class _HomeScreenState extends State<HomeScreen>
                                       ),
                                     ),
                                     Image.network(
-                                        "https:${hourlyData.condition.icon}"),
+                                        "https:${hourlyData?.condition.icon}"),
                                     Text(
-                                      "${hourlyData.tempC.ceil()}℃",
+                                      "${hourlyData?.tempC.ceil()}℃",
                                       style: TextStyle(
                                         fontSize: 14.sp,
                                         fontWeight: FontWeight.w900,

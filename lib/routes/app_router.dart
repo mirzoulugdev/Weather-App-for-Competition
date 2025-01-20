@@ -1,9 +1,9 @@
+import 'package:Weather/routes/app_router_names.dart';
+import 'package:Weather/view/screens/forecast_screen.dart';
+import 'package:Weather/view/screens/home_screen.dart';
+import 'package:Weather/view/screens/search_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hackaton/routes/app_router_names.dart';
-import 'package:hackaton/view/screens/forecast_screen.dart';
-import 'package:hackaton/view/screens/home_screen.dart';
-import 'package:hackaton/view/screens/search_screen.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
 

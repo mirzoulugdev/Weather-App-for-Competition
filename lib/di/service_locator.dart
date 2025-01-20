@@ -1,8 +1,8 @@
 import 'dart:developer';
 
+import 'package:Weather/viewModel/data/repositories/repository_impl.dart';
+import 'package:Weather/viewModel/providers/weather_provider.dart';
 import 'package:get_it/get_it.dart';
-import 'package:hackaton/viewModel/data/repositories/repository_impl.dart';
-import 'package:hackaton/viewModel/providers/weather_provider.dart';
 
 final sl = GetIt.instance;
 

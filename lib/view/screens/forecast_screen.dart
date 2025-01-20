@@ -1,14 +1,14 @@
 import 'dart:developer';
 
+import 'package:Weather/routes/app_router_names.dart';
+import 'package:Weather/utils/app_colors.dart';
+import 'package:Weather/utils/app_icons.dart';
+import 'package:Weather/viewModel/providers/weather_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hackaton/routes/app_router_names.dart';
-import 'package:hackaton/utils/app_colors.dart';
-import 'package:hackaton/utils/app_icons.dart';
-import 'package:hackaton/viewModel/providers/weather_provider.dart';
 import 'package:intl/intl.dart';
 
 import 'package:provider/provider.dart';

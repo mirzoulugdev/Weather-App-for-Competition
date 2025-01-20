@@ -1,9 +1,9 @@
 import 'dart:developer';
+import 'package:Weather/model/forecast_model.dart';
+import 'package:Weather/viewModel/data/repositories/repository_impl.dart';
 import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:hackaton/model/forecast_model.dart';
-import 'package:hackaton/viewModel/data/repositories/repository_impl.dart';
 
 class WeatherProvider extends ChangeNotifier {
   final RepositoryImpl repo;
