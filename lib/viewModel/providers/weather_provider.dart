@@ -66,16 +66,11 @@ class WeatherProvider extends ChangeNotifier {
     }
   }
 
-  Future<void> getForecastWeatherData([String cityName = 'tashkent']) async {
-    String name;
+  Future<void> getForecastWeatherData() async {
     try {
       // log("Fetching forecast for: $address");
-      if (cityName != null) {
-        name = address;
-      } else {
-        name = cityName!.toLowerCase();
-      }
-      final result = await repo.fetchForecastData(name);
+
+      final result = await repo.fetchForecastData(address);
       if (result != null) {
         forecastWeather = result;
         log(forecastWeather.toString());
